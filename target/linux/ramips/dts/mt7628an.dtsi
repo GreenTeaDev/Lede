@@ -77,7 +77,7 @@
 			interrupts = <3>;
 		};
 
-		gpio@600 {
+		gpio: gpio@600 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 
