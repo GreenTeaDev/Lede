@@ -25,6 +25,19 @@ define Device/tplink_tdw8970
 endef
 TARGET_DEVICES += tplink_tdw8970
 
+define Device/tplink_tdw8970-16m
+  $(Device/lantiqTpLink)
+  DEVICE_MODEL := TD-W8970-16M
+  DEVICE_VARIANT := v1
+  TPLINK_FLASHLAYOUT := 8Mltq-16Mflash
+  TPLINK_HWID := 0x89700001
+  TPLINK_HWREV := 1
+  IMAGE_SIZE := 15808k
+  DEVICE_PACKAGES:= kmod-ath9k wpad-mini kmod-usb-dwc2 kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES += TDW8970-16M
+endef
+TARGET_DEVICES += tplink_tdw8970-16m
+
 define Device/tplink_tdw8980
   $(Device/lantiqTpLink)
   DEVICE_MODEL := TD-W8980
